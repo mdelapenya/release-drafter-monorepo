@@ -6,4 +6,7 @@ import (
 
 func ExampleDoSomething() {
 	a.DoSomething("This is an info message")
+
+	// Output:
+	// [A] INFO: This is an info message
 }
