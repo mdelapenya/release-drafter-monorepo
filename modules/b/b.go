@@ -15,7 +15,7 @@ type BLogger struct {
 
 func DoSomething(msg string) {
 	core.WithLogger(&BLogger{
-		logger: log.New(os.Stdout, "[B]", log.LstdFlags),
+		logger: log.New(os.Stdout, p, log.LstdFlags),
 	})
 
 	core.Log.Info(msg)
