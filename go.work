@@ -6,4 +6,5 @@ use (
 	.
 	./modules/a
 	./modules/b
+	./modules/c
 )
