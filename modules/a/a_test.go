@@ -4,6 +4,6 @@ import (
 	"github.com/mdelapenya/release-drafter-monorepo/modules/a"
 )
 
-func ExampleALogger() {
+func ExampleDoSomething() {
 	a.DoSomething("This is an info message")
 }
