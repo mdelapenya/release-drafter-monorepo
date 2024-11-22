@@ -29,3 +29,20 @@ template: |
   ## Changes
 
   $CHANGES
+
+autolabeler:
+  - label: 'chore'
+    title:
+      - '/chore/i'
+  - label: 'dependencies'
+    title:
+      - '/deps/i'
+      - '/chore(deps)/i'
+  - label: 'bug'
+    title:
+      - '/fix/i'
+      - '/bug/i'
+  - label: 'enhancement'
+    title:
+      - '/feat/i'
+      - '/enhancement/i'
