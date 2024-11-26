@@ -1,0 +1,43 @@
+name: Labels Test
+
+on:
+  pull_request:
+    branches: [main]
+    types:
+      [opened, reopened, labeled, unlabeled]
+
+permissions:
+  # needed to add labels
+  pull-requests: write
+
+jobs:
+  assign-labels:
+    runs-on: ubuntu-latest
+    name: Assign labels in pull request
+    if: github.event.pull_request.merged == false
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: mauroalderete/action-assign-labels@671a4ca2da0f900464c58b8b5540a1e07133e915 # v1.5.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          conventional-commits: |
+            conventional-commits:
+              - type: 'fix'
+                nouns: ['FIX', 'Fix', 'fix', 'FIXED', 'Fixed', 'fixed','bug', 'bugfix']
+                labels: ['bug']
+              - type: 'feature'
+                nouns: ['FEATURE', 'Feature', 'feature', 'FEAT', 'Feat', 'feat']
+                labels: ['feature']
+              - type: 'breaking_change'
+                nouns: ['BREAKING CHANGE', 'BREAKING', 'MAJOR', 'break']
+                labels: ['breaking change']
+              - type: 'documentation'
+                nouns: ['doc','docu','document','documentation', 'docs']
+                labels: ['documentation']
+              - type: 'chore'
+                nouns: ['chore']
+                labels: ['chore']
+              - type: 'dependencies'
+                nouns: ['deps', 'dependencies']
+                labels: ['dependencies']
