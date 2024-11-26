@@ -7,7 +7,7 @@ import (
 	core "github.com/mdelapenya/release-drafter-monorepo"
 )
 
-const p = "[A] "
+const p = "[ A ] "
 
 type ALogger struct {
 	logger *log.Logger
