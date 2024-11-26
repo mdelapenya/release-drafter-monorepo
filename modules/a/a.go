@@ -18,7 +18,7 @@ func DoSomething(msg string) {
 		logger: log.New(os.Stdout, p, log.LstdFlags),
 	})
 
-	core.Log.Info(msg)
+	core.Log.Warn(msg)
 }
 
 func (l *ALogger) Debug(msg string) {
