@@ -6,6 +6,10 @@ on:
     types:
       [opened, reopened, labeled, unlabeled]
 
+permissions:
+  # needed to add labels
+  pull-requests: write
+
 jobs:
   assign-labels:
     runs-on: ubuntu-latest
