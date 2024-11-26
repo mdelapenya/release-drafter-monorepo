@@ -1,5 +1,5 @@
-name-template: 'v$RESOLVED_VERSION 🌈'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: 'modules/c/v$RESOLVED_VERSION 🌈'
+tag-template: 'modules/c/v$RESOLVED_VERSION'
 tag-prefix: 'modules/c/v'
 categories:
   - title: '⚠️ Breaking Changes'
