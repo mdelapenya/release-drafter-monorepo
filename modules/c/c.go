@@ -7,7 +7,7 @@ import (
 	core "github.com/mdelapenya/release-drafter-monorepo"
 )
 
-const p = "[ C ] "
+const p = "🚗 [C]"
 
 type CLogger struct {
 	logger *log.Logger
@@ -43,6 +43,6 @@ func (l *CLogger) Fatal(msg string) {
 }
 
 func (l *CLogger) log(prefix string, msg string) {
-	l.logger.SetPrefix(p + prefix + ": ")
+	l.logger.SetPrefix(p + prefix + " ")
 	l.logger.Println(msg)
 }
