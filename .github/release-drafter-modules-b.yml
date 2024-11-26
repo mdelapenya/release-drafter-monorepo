@@ -1,5 +1,6 @@
 name-template: 'v$RESOLVED_VERSION 🌈'
 tag-template: 'v$RESOLVED_VERSION'
+tag-prefix: 'modules/b/v'
 categories:
   - title: '⚠️ Breaking Changes'
     labels:
